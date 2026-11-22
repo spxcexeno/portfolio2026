@@ -102,7 +102,7 @@ window.PORTFOLIO = {
         },
       ],
       bloc1: ["enligne", "projet", "devpro"],
-      links: [{ label: "Code source sur GitHub", href: "https://github.com/spxcexeno/portfolioGIT26" }],
+      links: [{ label: "Code source sur GitHub", href: "https://github.com/spxcexeno/portfolio2026" }],
     },
 
     /* ----- MODÈLE À COPIER POUR UN NOUVEAU PROJET -----------------------
