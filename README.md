@@ -3,7 +3,7 @@
 Portfolio de BTS SIO (option SLAM) : projets, procédures, compétences et parcours.
 
 - Site statique (HTML, CSS, JavaScript natif), aucune dépendance.
-- Pour le voir : ouvrir `index.html` dans un navigateur, ou l'activer avec GitHub Pages.
+- En ligne : https://spxcexeno.github.io/portfolio2026/
 
 ## Ajouter un projet ou une procédure
 
