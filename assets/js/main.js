@@ -109,9 +109,25 @@
       </tbody>`;
   }
 
+  // Documents (CV, lettre, rapport de stage) : seuls ceux qui ont un fichier sont affichés.
+  const DOWNLOAD = true;
+  function renderDocs() {
+    const docs = (data.DOCUMENTS || []).filter((d) => d.href);
+    const attrs = (d) => (DOWNLOAD ? `download="${esc(d.file)}"` : 'target="_blank" rel="noopener"');
+    $$("[data-docs]").forEach((el) => {
+      const mode = el.dataset.docs;
+      el.innerHTML = docs.map((d) => {
+        if (mode === "menu") return `<a href="${esc(d.href)}" ${attrs(d)}>${esc(d.label)} ↓</a>`;
+        if (mode === "inline") return `<a href="${esc(d.href)}" ${attrs(d)}>${esc(d.label)}</a>`;
+        return `<a href="${esc(d.href)}" class="link-arrow" ${attrs(d)}>${esc(d.label)}</a>`;
+      }).join(mode === "inline" ? " · " : "");
+    });
+  }
+
   renderProjects();
   renderProcedures();
   renderMatrix();
+  renderDocs();
 
   /* ------------------------------------------------------------------
      2. Découpage des titres en mots (effet masque)
@@ -377,7 +393,10 @@
       `<h2 class="m-title" id="modal-title">${esc(p.title)}</h2>`,
       `<p class="m-lead">${esc(p.summary)}</p>`,
       `<div class="m-block"><h3>Contexte</h3><p>${esc(p.context)}</p></div>`,
-      `<div class="m-block"><h3>Missions réalisées</h3><div class="m-missions">${p.missions.map((m) => `
+      p.team && p.team.length
+        ? `<div class="m-block"><h3>Équipe</h3><ul class="chips">${p.team.map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>`
+        : "",
+      `<div class="m-block"><h3>Missions</h3><div class="m-missions">${p.missions.map((m) => `
           <div><h4>${esc(m.group)}</h4><ul>${m.items.map((it) => `<li>${esc(it)}</li>`).join("")}</ul></div>`).join("")}
         </div></div>`,
       `<div class="m-block"><h3>Technologies &amp; outils</h3><ul class="chips">${p.stack.map((s) => `<li>${esc(s)}</li>`).join("")}</ul></div>`,

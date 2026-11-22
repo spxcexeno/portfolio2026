@@ -36,6 +36,7 @@
 
     <nav class="nav__links" aria-label="Navigation principale">
       <a href="#apropos" data-nav>À propos</a>
+      <a href="#bts" data-nav>BTS SIO</a>
       <a href="#projets" data-nav>Projets</a>
       <a href="#procedures" data-nav>Procédures</a>
       <a href="#competences" data-nav>Compétences</a>
@@ -55,16 +56,14 @@
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <nav>
       <a href="#apropos"><span class="mono">01</span>À propos</a>
-      <a href="#projets"><span class="mono">02</span>Projets</a>
-      <a href="#procedures"><span class="mono">03</span>Procédures</a>
-      <a href="#competences"><span class="mono">04</span>Compétences</a>
-      <a href="#parcours"><span class="mono">05</span>Parcours</a>
-      <a href="#contact"><span class="mono">06</span>Contact</a>
+      <a href="#bts"><span class="mono">02</span>BTS SIO</a>
+      <a href="#projets"><span class="mono">03</span>Projets</a>
+      <a href="#procedures"><span class="mono">04</span>Procédures</a>
+      <a href="#competences"><span class="mono">05</span>Compétences</a>
+      <a href="#parcours"><span class="mono">06</span>Parcours</a>
+      <a href="#contact"><span class="mono">07</span>Contact</a>
     </nav>
-    <div class="mobile-menu__docs">
-      <a href="assets/docs/CV-Jayden-AKOI.pdf" download>CV ↓</a>
-      <a href="assets/docs/lettre-motivation-Jayden-AKOI.pdf" download>Lettre de motivation ↓</a>
-    </div>
+    <div class="mobile-menu__docs" data-docs="menu"></div>
   </div>
 
   <main>
@@ -135,10 +134,7 @@
               mais aussi le serveur Linux, le réseau et la documentation qui permettent de le mettre en production.
               Sérieux et autonome, je cherche un stage pour mettre ces compétences au service d'une vraie équipe.
             </p>
-            <div class="about__docs" data-reveal>
-              <a href="assets/docs/CV-Jayden-AKOI.pdf" class="link-arrow" download>Télécharger mon CV</a>
-              <a href="assets/docs/lettre-motivation-Jayden-AKOI.pdf" class="link-arrow" download>Lettre de motivation</a>
-            </div>
+            <div class="about__docs" data-reveal data-docs="links"></div>
           </div>
 
           <ul class="about__stats">
@@ -151,12 +147,62 @@
       </div>
     </section>
 
+    <!-- ================= BTS SIO ================= -->
+    <section class="section bts" id="bts">
+      <div class="container">
+        <header class="section__head">
+          <span class="section__index mono" data-reveal>02 — Formation</span>
+          <h2 class="section__title" data-split>Le BTS SIO <em>en bref</em></h2>
+        </header>
+
+        <div class="bts__grid">
+          <div class="bts__text">
+            <p data-reveal>
+              Le <strong>BTS Services Informatiques aux Organisations</strong> est un diplôme bac+2 préparé en deux ans.
+              Il forme des techniciens capables d'installer, de maintenir et de faire évoluer les services informatiques d'une organisation.
+            </p>
+            <p data-reveal>
+              Après un tronc commun, chaque étudiant choisit une option : <strong>SISR</strong>, tournée vers les infrastructures,
+              les systèmes et les réseaux, ou <strong>SLAM</strong>, tournée vers le développement d'applications. J'ai choisi l'option SLAM.
+            </p>
+            <p data-reveal>
+              La formation alterne cours, ateliers professionnels menés comme de vrais projets clients et stages en entreprise.
+              Ce portfolio rassemble les réalisations qui en sont issues.
+            </p>
+            <div class="bts__links" data-reveal>
+              <a class="link-arrow" href="https://enqdip.sup.adc.education.fr/bts/referentiel/BTS_ServicesInformatiquesOrganisations.pdf" target="_blank" rel="noopener">Bulletin officiel du BTS SIO</a>
+              <a class="link-arrow" href="https://institutionsaintaspais.fr/campus/" target="_blank" rel="noopener">Campus Saint-Aspais, Melun</a>
+            </div>
+          </div>
+
+          <ol class="bts__blocs">
+            <li data-reveal>
+              <span class="mono">Bloc 1 · tronc commun</span>
+              <strong>Support et mise à disposition de services informatiques</strong>
+            </li>
+            <li data-reveal class="is-mine">
+              <span class="mono">Bloc 2 · option SLAM</span>
+              <strong>Conception et développement d'applications</strong>
+            </li>
+            <li data-reveal>
+              <span class="mono">Bloc 3 · tronc commun</span>
+              <strong>Cybersécurité des services informatiques</strong>
+            </li>
+            <li data-reveal>
+              <span class="mono">Enseignements généraux</span>
+              <strong>Culture générale, anglais, mathématiques, culture économique, juridique et managériale</strong>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= PROJETS ================= -->
     <section class="section projects" id="projets">
       <div class="container">
         <header class="section__head section__head--row">
           <div>
-            <span class="section__index mono" data-reveal>02 — Projets</span>
+            <span class="section__index mono" data-reveal>03 — Projets</span>
             <h2 class="section__title" data-split>Réalisations <em>de l'année</em></h2>
           </div>
           <p class="section__aside" data-reveal>
@@ -174,7 +220,7 @@
       <div class="container">
         <header class="section__head section__head--row">
           <div>
-            <span class="section__index mono" data-reveal>03 — Procédures</span>
+            <span class="section__index mono" data-reveal>04 — Procédures</span>
             <h2 class="section__title" data-split>Documenter <em>pour transmettre</em></h2>
           </div>
           <p class="section__aside" data-reveal>
@@ -190,7 +236,7 @@
     <section class="section skills" id="competences">
       <div class="container">
         <header class="section__head">
-          <span class="section__index mono" data-reveal>04 — Compétences</span>
+          <span class="section__index mono" data-reveal>05 — Compétences</span>
           <h2 class="section__title" data-split>Une boîte à outils <em>qui s'étoffe</em></h2>
         </header>
 
@@ -253,7 +299,7 @@
     <section class="section journey" id="parcours">
       <div class="container">
         <header class="section__head">
-          <span class="section__index mono" data-reveal>05 — Parcours</span>
+          <span class="section__index mono" data-reveal>06 — Parcours</span>
           <h2 class="section__title" data-split>Formation <em>&amp;</em> expériences</h2>
         </header>
 
@@ -319,7 +365,7 @@
     <section class="section contact" id="contact">
       <div class="container">
         <header class="section__head">
-          <span class="section__index mono" data-reveal>06 — Contact</span>
+          <span class="section__index mono" data-reveal>07 — Contact</span>
           <h2 class="section__title section__title--xl" data-split>Un stage, un projet ? <em>Parlons-en.</em></h2>
         </header>
 
@@ -335,6 +381,7 @@
               <li data-reveal><span class="mono">Téléphone</span><a href="tel:+33771821116">07 71 82 11 16</a></li>
               <li data-reveal><span class="mono">Localisation</span><span>Montereau-Fault-Yonne (77) · Permis B</span></li>
               <li data-reveal><span class="mono">Disponibilités</span><span>Lun — Ven · 8h — 17h</span></li>
+              <li data-reveal><span class="mono">Documents</span><span class="contact__docs" data-docs="inline"></span></li>
               <li data-reveal><span class="mono">GitHub</span><a href="https://github.com/spxcexeno" target="_blank" rel="noopener">github.com/spxcexeno</a></li>
             </ul>
           </div>

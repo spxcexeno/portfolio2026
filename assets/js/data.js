@@ -19,74 +19,95 @@
 window.PORTFOLIO = {
   PROJECTS: [
     {
-      id: "club-foot",
-      title: "Projet AP SIO 2",
+      id: "gestion-club",
+      title: "Gestion de club M2L",
       kind: "Atelier professionnel · SIO 2",
       year: "2026 — 2027",
       status: "En cours",
       cover: null,
       accent: "#A8B5A2",
       summary:
-        "Application web de gestion d'un club de football : équipes, joueurs, matchs, entraînements, performances et objectifs individuels.",
+        "Webapp de gestion de club sportif pour la Maison des Ligues de Lorraine : adhérents, entraînements, compétitions, objectifs et performances.",
       context:
-        "Atelier professionnel de deuxième année, développé avec le framework Symfony. L'application doit permettre à un club de suivre ses équipes de U7 à vétérans, d'organiser les entraînements et les rencontres, et de suivre la progression de chaque joueur. Trois profils d'utilisateurs sont prévus : administrateur, entraîneur et joueur. Le projet est en cours : la base de données est en place, les écrans arrivent ensuite.",
-      stack: ["PHP 8.4", "Symfony 8", "Doctrine ORM", "Twig", "Git"],
+        "La M2L, association de clubs sportifs, veut une webapp pour suivre ses adhérents, améliorer les performances de ses sportifs en compétition et donner aux plus jeunes l'envie de mieux s'entraîner : une sorte de « Doctolib » du club de sport, sous licence GPL pour pouvoir être réutilisée par d'autres clubs. Une version bêta est attendue pour décembre. Le cahier des charges impose Symfony avec Twig et JavaScript, une base MySQL, une séparation nette entre frontend et backend, et une authentification sécurisée qui respecte le RGPD.",
+      stack: ["PHP", "Symfony", "Doctrine ORM", "Twig", "JavaScript", "MySQL", "Git"],
       missions: [
         {
-          group: "Base de données",
+          group: "Réalisé",
           items: [
-            "Modélisation de 7 entités : Utilisateur, Équipe, Joueur, Rencontre, Entraînement, Performance, Objectif",
-            "Relations Doctrine entre les entités (un-à-un, un-à-plusieurs, plusieurs-à-un)",
-            "Création du schéma par migrations Doctrine",
-            "Jeu de données de test avec des fixtures",
+            "Modélisation de la base : utilisateurs, équipes, sportifs, rencontres, entraînements, performances et objectifs",
+            "Trois rôles : administrateur, entraîneur (animateur) et sportif",
+            "Création du schéma par migrations Doctrine et jeu de données de test (fixtures)",
           ],
         },
         {
-          group: "Règles métier",
+          group: "Version 1 · en cours",
           items: [
-            "Rôles utilisateurs : administrateur, entraîneur, joueur",
-            "Catégories d'équipes (U7 à Seniors et Vétérans), postes et pied fort des joueurs",
-            "Types de rencontres : championnat, coupe, tournoi, amical",
-            "Statistiques par match : temps de jeu, buts, passes décisives, cartons, note",
-            "Objectifs individuels avec statut : en cours, validé, abandonné",
+            "Pages de connexion /login et de déconnexion /logout",
+            "Interface administrateur : gestion des compétitions, des sportifs et des entraîneurs (CRUD Doctrine)",
+            "Interface entraîneur : entraînements, équipes, inscriptions aux compétitions, objectifs de chaque adhérent",
+            "Consultation de ses objectifs côté sportif",
+            "Interface responsive de type tableau de bord",
+          ],
+        },
+        {
+          group: "Évolutions prévues",
+          items: [
+            "Statistiques sur les résultats avec graphiques",
+            "Indice de performance : performance en compétition × engagement",
+            "Fiche du sportif exportée en PDF",
+            "Import de sportifs ou de compétitions en XML ou JSON",
           ],
         },
       ],
-      bloc1: ["enligne", "projet", "devpro"],
+      bloc1: ["patrimoine", "enligne", "projet", "service", "devpro"],
       links: [],
     },
 
     {
       id: "cinetrack",
-      title: "CineTrack MVC",
-      kind: "TP · SIO 2",
+      title: "CineTrack",
+      kind: "Projet CDA · SIO 2 · en équipe",
       year: "2026 — 2027",
       status: "En cours",
       cover: null,
       accent: "#D9774B",
+      team: ["Jayden AKOI", "Evan MONNERVILLE", "Lucas ROUZAIRE"],
       summary:
-        "Application web de catalogue de films en C# avec ASP.NET Core, construite selon le modèle MVC (Modèle, Vue, Contrôleur).",
+        "Application de découverte et de réservation de films au cinéma, développée à trois en C# avec ASP.NET Core.",
       context:
-        "Travail pratique pour apprendre l'architecture MVC avec ASP.NET Core. L'application liste des films, affiche la fiche détaillée de chacun et permet de filtrer les films sortis après une année donnée. La persistance avec Entity Framework Core et SQLite est en cours de mise en place.",
-      stack: ["C#", ".NET 10", "ASP.NET Core MVC", "Razor", "Entity Framework Core", "SQLite"],
+        "CineTrack regroupe dans une seule application les informations sur les films, les séances et les réservations des utilisateurs. Le projet se fait en équipe de trois avec une méthode de travail professionnelle : chaque membre est responsable d'au moins une fonctionnalité, identifiable sur GitHub par ses issues, ses commits et ses pull requests.",
+      stack: ["C#", ".NET", "ASP.NET Core", "ASP.NET Core Identity", "Git", "GitHub Projects"],
       missions: [
         {
-          group: "Développement",
+          group: "Fonctionnalités",
           items: [
-            "Modèle Film : titre, année de sortie, réalisateur",
-            "Contrôleur Films avec trois actions : liste, détails, films sortis après une année",
-            "Gestion du film introuvable avec une réponse 404",
-            "Filtrage des films avec LINQ",
-            "Vues Razor pour la liste et la fiche d'un film",
+            "Catalogue des films avec leur description",
+            "Comptes utilisateurs : inscription, connexion et profil",
+            "Formulaire de réservation d'une séance pour un film",
           ],
         },
         {
-          group: "Données",
-          items: ["Contexte Entity Framework Core prêt pour une base SQLite"],
+          group: "Comptes et sécurité",
+          items: [
+            "Rôles Admin et Utilisateur créés automatiquement au démarrage",
+            "Premier administrateur défini par variables d'environnement, sans identifiants dans le dépôt",
+            "Espace d'administration : créer des comptes, changer les rôles, supprimer un compte",
+            "Un changement de rôle s'applique aux sessions ouvertes en 5 minutes au plus",
+          ],
+        },
+        {
+          group: "Travail en équipe",
+          items: [
+            "Suivi des tâches avec GitHub Issues et un tableau Kanban (GitHub Projects)",
+            "Une branche par fonctionnalité, intégrée par pull request",
+            "Revue de code entre membres de l'équipe",
+            "Arborescence src / tests / docs et modèles d'issues et de pull requests",
+          ],
         },
       ],
-      bloc1: ["enligne", "devpro"],
-      links: [{ label: "Code source sur GitHub", href: "https://github.com/spxcexeno/TP-MVC-Films-reconstruction.md" }],
+      bloc1: ["enligne", "projet", "service", "devpro"],
+      links: [],
     },
 
     {
@@ -224,6 +245,14 @@ window.PORTFOLIO = {
         "Déclarer les DNS (8.8.8.8 / 1.1.1.1) puis vérifier avec `ipconfig /all` et `ping`",
       ],
     },
+  ],
+
+  /* Documents affichés dans « À propos », le menu mobile et le contact.
+     Mettre href: null pour masquer un document pas encore disponible. */
+  DOCUMENTS: [
+    { label: "CV", file: "CV-Jayden-AKOI.pdf", href: "assets/docs/CV-Jayden-AKOI.pdf" },
+    { label: "Lettre de motivation", file: "Lettre-motivation-Jayden-AKOI.pdf", href: "assets/docs/lettre-motivation-Jayden-AKOI.pdf" },
+    { label: "Rapport de stage 1re année", file: "Rapport-stage-SIO1-Jayden-AKOI.pdf", href: null },
   ],
 
   BLOC1: {

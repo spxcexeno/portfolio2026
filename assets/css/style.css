@@ -456,6 +456,7 @@ svg { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1
 .hero__title .line > span { display: inline-block; }
 .hero__title em { color: var(--copper); letter-spacing: -0.02em; padding-right: 0.05em; }
 .hero__title .accent { color: var(--copper); }
+.hero__title em + .accent { margin-left: -0.12em; }
 
 .hero__bottom {
   margin-top: clamp(32px, 5vw, 56px);
@@ -611,6 +612,38 @@ body.is-ready [data-hero] { opacity: 1; transform: none; }
 }
 .about__stats li:first-child .stat__num { color: var(--copper); }
 .stat__label { font-size: 0.88rem; color: var(--muted); line-height: 1.45; }
+
+/* ---------- BTS SIO ---------- */
+.bts__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(40px, 7vw, 110px);
+  align-items: start;
+}
+.bts__text p { margin: 0 0 20px; color: var(--muted); font-size: clamp(1rem, 1.4vw, 1.12rem); }
+.bts__links { display: flex; flex-wrap: wrap; gap: 14px 28px; margin-top: 30px; }
+.bts__blocs { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.bts__blocs li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 22px 0 22px 22px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.bts__blocs li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 28px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+}
+.bts__blocs li.is-mine::before { background: var(--copper); border-color: var(--copper); }
+.bts__blocs .mono { color: var(--muted); }
+.bts__blocs li.is-mine .mono { color: var(--copper); }
+.bts__blocs strong { font-size: 1.08rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.35; }
+.contact__docs a { border-bottom: 1px solid var(--line-strong); }
 
 /* ---------- Projets ---------- */
 .projects__list { display: flex; flex-direction: column; gap: 20px; }
@@ -1161,6 +1194,7 @@ body.is-ready [data-hero] { opacity: 1; transform: none; }
 
 @media (max-width: 860px) {
   .about__grid,
+  .bts__grid,
   .contact__grid,
   .project { grid-template-columns: 1fr; }
   .procedures__grid { grid-template-columns: 1fr; }
