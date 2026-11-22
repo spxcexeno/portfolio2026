@@ -118,6 +118,7 @@
       const mode = el.dataset.docs;
       el.innerHTML = docs.map((d) => {
         if (mode === "menu") return `<a href="${esc(d.href)}" ${attrs(d)}>${esc(d.label)} ↓</a>`;
+        if (mode === "stage") return d.label.startsWith("Rapport") ? `<a href="${esc(d.href)}" class="link-arrow link-arrow--sm" ${attrs(d)}>Lire le rapport de stage</a>` : "";
         if (mode === "inline") return `<a href="${esc(d.href)}" ${attrs(d)}>${esc(d.label)}</a>`;
         return `<a href="${esc(d.href)}" class="link-arrow" ${attrs(d)}>${esc(d.label)}</a>`;
       }).join(mode === "inline" ? " · " : "");

@@ -1017,6 +1017,9 @@ body.is-ready [data-hero] { opacity: 1; transform: none; }
   color: var(--copper);
 }
 .tl-item__tag--alt { background: var(--sage-soft); color: var(--sage); }
+.tl-item__list { margin: 4px 0 12px; padding-left: 18px; color: var(--muted); }
+.tl-item__list li { margin-bottom: 4px; }
+.tl-item__list li::marker { color: var(--copper); }
 .tl-item__img {
   width: 180px;
   aspect-ratio: 4 / 3;

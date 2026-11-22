@@ -20,23 +20,27 @@ window.PORTFOLIO = {
   PROJECTS: [
     {
       id: "gestion-club",
-      title: "Gestion de club M2L",
+      title: "Gestion de club de football",
       kind: "Atelier professionnel · SIO 2",
       year: "2026 — 2027",
       status: "En cours",
       cover: null,
       accent: "#A8B5A2",
       summary:
-        "Webapp de gestion de club sportif pour la Maison des Ligues de Lorraine : adhérents, entraînements, compétitions, objectifs et performances.",
+        "Webapp de gestion d'un club de football : équipes, joueurs, matchs, entraînements, statistiques et objectifs individuels.",
       context:
-        "La M2L, association de clubs sportifs, veut une webapp pour suivre ses adhérents, améliorer les performances de ses sportifs en compétition et donner aux plus jeunes l'envie de mieux s'entraîner : une sorte de « Doctolib » du club de sport, sous licence GPL pour pouvoir être réutilisée par d'autres clubs. Une version bêta est attendue pour décembre. Le cahier des charges impose Symfony avec Twig et JavaScript, une base MySQL, une séparation nette entre frontend et backend, et une authentification sécurisée qui respecte le RGPD.",
-      stack: ["PHP", "Symfony", "Doctrine ORM", "Twig", "JavaScript", "MySQL", "Git"],
+        "Le sujet vient de la M2L (Maison des Ligues de Lorraine), une association de clubs sportifs qui veut une webapp pour suivre ses adhérents, améliorer les performances de ses sportifs en compétition et donner aux plus jeunes l'envie de mieux s'entraîner : une sorte de « Doctolib » du club de sport, sous licence GPL pour pouvoir être reprise par d'autres clubs. J'ai appliqué ce sujet à un club de football, avec l'accord de mon professeur. Le cahier des charges impose Symfony avec Twig et JavaScript, une séparation nette entre frontend et backend, et une authentification sécurisée qui respecte le RGPD. Une version bêta est attendue pour décembre.",
+      stack: ["PHP 8.4", "Symfony", "Doctrine ORM", "Twig", "JavaScript", "Git"],
       missions: [
         {
           group: "Réalisé",
           items: [
-            "Modélisation de la base : utilisateurs, équipes, sportifs, rencontres, entraînements, performances et objectifs",
-            "Trois rôles : administrateur, entraîneur (animateur) et sportif",
+            "Modélisation de 7 entités : Utilisateur, Équipe, Joueur, Rencontre, Entraînement, Performance, Objectif",
+            "Trois rôles : administrateur, entraîneur et joueur",
+            "Équipes par catégorie, de U7 à Seniors et Vétérans ; joueurs avec poste, pied fort, numéro de maillot et licence",
+            "Rencontres de championnat, coupe, tournoi ou amical, à domicile ou à l'extérieur, avec le score",
+            "Statistiques par joueur et par match : titularisation, minutes jouées, buts, passes décisives, cartons, note",
+            "Objectifs individuels avec un statut : en cours, validé ou abandonné",
             "Création du schéma par migrations Doctrine et jeu de données de test (fixtures)",
           ],
         },
@@ -44,9 +48,9 @@ window.PORTFOLIO = {
           group: "Version 1 · en cours",
           items: [
             "Pages de connexion /login et de déconnexion /logout",
-            "Interface administrateur : gestion des compétitions, des sportifs et des entraîneurs (CRUD Doctrine)",
-            "Interface entraîneur : entraînements, équipes, inscriptions aux compétitions, objectifs de chaque adhérent",
-            "Consultation de ses objectifs côté sportif",
+            "Interface administrateur : gestion des équipes, des joueurs, des entraîneurs et des rencontres",
+            "Interface entraîneur : entraînements, composition des équipes, objectifs de chaque joueur",
+            "Consultation de ses objectifs côté joueur",
             "Interface responsive de type tableau de bord",
           ],
         },
@@ -54,9 +58,9 @@ window.PORTFOLIO = {
           group: "Évolutions prévues",
           items: [
             "Statistiques sur les résultats avec graphiques",
-            "Indice de performance : performance en compétition × engagement",
-            "Fiche du sportif exportée en PDF",
-            "Import de sportifs ou de compétitions en XML ou JSON",
+            "Indice de performance : performance en match × engagement",
+            "Fiche du joueur exportée en PDF",
+            "Import de joueurs ou de rencontres en XML ou JSON",
           ],
         },
       ],
