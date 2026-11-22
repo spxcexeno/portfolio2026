@@ -760,6 +760,25 @@ body.is-ready [data-hero] { opacity: 1; transform: none; }
 .project--soon strong { font-weight: 600; }
 .project--soon::before { display: none; }
 
+.status-pill {
+  position: absolute;
+  right: 14px; top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px 5px 10px;
+  border-radius: 999px;
+  background: rgba(14, 16, 18, 0.8);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--line-strong);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--sage);
+}
+.status-pill .dot { width: 6px; height: 6px; }
+.status-pill--inline { position: static; }
+.m-top { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+
 /* ---------- Procédures ---------- */
 .procedures__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 

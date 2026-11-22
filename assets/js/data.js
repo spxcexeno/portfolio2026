@@ -19,6 +19,77 @@
 window.PORTFOLIO = {
   PROJECTS: [
     {
+      id: "club-foot",
+      title: "Projet AP SIO 2",
+      kind: "Atelier professionnel · SIO 2",
+      year: "2026 — 2027",
+      status: "En cours",
+      cover: null,
+      accent: "#A8B5A2",
+      summary:
+        "Application web de gestion d'un club de football : équipes, joueurs, matchs, entraînements, performances et objectifs individuels.",
+      context:
+        "Atelier professionnel de deuxième année, développé avec le framework Symfony. L'application doit permettre à un club de suivre ses équipes de U7 à vétérans, d'organiser les entraînements et les rencontres, et de suivre la progression de chaque joueur. Trois profils d'utilisateurs sont prévus : administrateur, entraîneur et joueur. Le projet est en cours : la base de données est en place, les écrans arrivent ensuite.",
+      stack: ["PHP 8.4", "Symfony 8", "Doctrine ORM", "Twig", "Git"],
+      missions: [
+        {
+          group: "Base de données",
+          items: [
+            "Modélisation de 7 entités : Utilisateur, Équipe, Joueur, Rencontre, Entraînement, Performance, Objectif",
+            "Relations Doctrine entre les entités (un-à-un, un-à-plusieurs, plusieurs-à-un)",
+            "Création du schéma par migrations Doctrine",
+            "Jeu de données de test avec des fixtures",
+          ],
+        },
+        {
+          group: "Règles métier",
+          items: [
+            "Rôles utilisateurs : administrateur, entraîneur, joueur",
+            "Catégories d'équipes (U7 à Seniors et Vétérans), postes et pied fort des joueurs",
+            "Types de rencontres : championnat, coupe, tournoi, amical",
+            "Statistiques par match : temps de jeu, buts, passes décisives, cartons, note",
+            "Objectifs individuels avec statut : en cours, validé, abandonné",
+          ],
+        },
+      ],
+      bloc1: ["enligne", "projet", "devpro"],
+      links: [],
+    },
+
+    {
+      id: "cinetrack",
+      title: "CineTrack MVC",
+      kind: "TP · SIO 2",
+      year: "2026 — 2027",
+      status: "En cours",
+      cover: null,
+      accent: "#D9774B",
+      summary:
+        "Application web de catalogue de films en C# avec ASP.NET Core, construite selon le modèle MVC (Modèle, Vue, Contrôleur).",
+      context:
+        "Travail pratique pour apprendre l'architecture MVC avec ASP.NET Core. L'application liste des films, affiche la fiche détaillée de chacun et permet de filtrer les films sortis après une année donnée. La persistance avec Entity Framework Core et SQLite est en cours de mise en place.",
+      stack: ["C#", ".NET 10", "ASP.NET Core MVC", "Razor", "Entity Framework Core", "SQLite"],
+      missions: [
+        {
+          group: "Développement",
+          items: [
+            "Modèle Film : titre, année de sortie, réalisateur",
+            "Contrôleur Films avec trois actions : liste, détails, films sortis après une année",
+            "Gestion du film introuvable avec une réponse 404",
+            "Filtrage des films avec LINQ",
+            "Vues Razor pour la liste et la fiche d'un film",
+          ],
+        },
+        {
+          group: "Données",
+          items: ["Contexte Entity Framework Core prêt pour une base SQLite"],
+        },
+      ],
+      bloc1: ["enligne", "devpro"],
+      links: [{ label: "Code source sur GitHub", href: "https://github.com/spxcexeno/TP-MVC-Films-reconstruction.md" }],
+    },
+
+    {
       id: "koo2fourchette",
       title: "Koo2Fourchette",
       kind: "Atelier professionnel · SIO 1",
@@ -111,6 +182,7 @@ window.PORTFOLIO = {
       title: "Nom du projet",
       kind: "Atelier professionnel · SIO 2",
       year: "2026 — 2027",
+      status: "En cours",               // à retirer une fois le projet terminé
       cover: "assets/img/mon-image.png", // ou null
       accent: "#D9774B",
       summary: "Une phrase qui résume le projet.",

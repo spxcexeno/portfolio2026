@@ -52,6 +52,7 @@
         <div class="project__visual">
           <div class="project__visual-inner">${projectVisual(p)}</div>
           <span class="project__tagline">${String(i + 1).padStart(2, "0")} / ${String(data.PROJECTS.length).padStart(2, "0")}</span>
+          ${p.status ? `<span class="status-pill"><span class="dot"></span>${esc(p.status)}</span>` : ""}
         </div>
         <div class="project__info">
           <div>
@@ -68,11 +69,7 @@
         </div>
       </button>`).join("");
 
-    list.innerHTML = cards + `
-      <div class="project project--soon" data-reveal>
-        <span><strong>Prochains projets</strong> — les ateliers professionnels de l'année seront ajoutés au fil de leur réalisation.</span>
-        <span class="mono">En cours…</span>
-      </div>`;
+    list.innerHTML = cards;
   }
 
   function renderProcedures() {
@@ -375,7 +372,8 @@
     lastFocus = document.activeElement;
 
     const blocks = [
-      `<span class="m-kind mono">${esc(p.kind)} · ${esc(p.year)}</span>`,
+      `<div class="m-top"><span class="m-kind mono">${esc(p.kind)} · ${esc(p.year)}</span>${
+        p.status ? `<span class="status-pill status-pill--inline"><span class="dot"></span>${esc(p.status)}</span>` : ""}</div>`,
       `<h2 class="m-title" id="modal-title">${esc(p.title)}</h2>`,
       `<p class="m-lead">${esc(p.summary)}</p>`,
       `<div class="m-block"><h3>Contexte</h3><p>${esc(p.context)}</p></div>`,
