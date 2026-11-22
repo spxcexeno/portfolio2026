@@ -115,6 +115,52 @@ window.PORTFOLIO = {
     },
 
     {
+      id: "intranet-api",
+      title: "Intranet de l'Amicale",
+      kind: "Stage SIO 1 · CCPM",
+      year: "Mai — juin 2026",
+      cover: null,
+      accent: "#D9774B",
+      summary:
+        "Conception et développement en autonomie de l'intranet de l'Amicale du Personnel Intercommunal de la Communauté de Communes du Pays de Montereau.",
+      context:
+        "Pendant mon stage de première année (du 18 mai au 26 juin 2026), le service des Ressources Humaines de la CCPM m'a confié la création d'un site pour l'Amicale du Personnel Intercommunal (API), l'association qui organise les activités des agents. Aucun cahier des charges ne m'a été fourni : j'ai moi-même analysé les besoins d'une amicale du personnel, défini les fonctionnalités et mené le projet de bout en bout, en grande autonomie.",
+      stack: ["WordPress", "PHP", "JavaScript", "HTML", "CSS"],
+      missions: [
+        {
+          group: "Analyse du besoin",
+          items: [
+            "Rédaction de mon propre cahier des charges à partir des usages d'un intranet associatif",
+            "Fonctionnalités retenues : accueil, calendrier des événements, inscriptions, galerie photo, espace membres, partage de documents",
+          ],
+        },
+        {
+          group: "Développement",
+          items: [
+            "Site complet sous WordPress : rubriques Accueil, Actualité, Activité, Fichiers et Sondage",
+            "Module calendrier d'événements codé à la main en PHP, JavaScript, HTML et CSS, sans plugin",
+            "Publication d'événements, de sondages et de fichiers par les agents connectés",
+            "Espace membres avec inscription et connexion par un plugin d'authentification",
+          ],
+        },
+        {
+          group: "Résolution d'incidents",
+          items: [
+            "Suppression d'événements défaillante : correction de la logique du script PHP",
+            "Événements visibles seulement sur le poste qui les publiait : données déplacées du stockage navigateur vers la base de données",
+            "Corrections d'affichage du calendrier en CSS",
+          ],
+        },
+        {
+          group: "Limite et évolution proposée",
+          items: ["Réserver la publication au responsable de l'Amicale, alors que tous les agents peuvent publier aujourd'hui"],
+        },
+      ],
+      bloc1: ["incidents", "enligne", "projet", "service", "devpro"],
+      links: [{ label: "Rapport de stage (PDF)", href: "assets/docs/rapport-stage-SIO1-Jayden-AKOI.pdf" }],
+    },
+
+    {
       id: "koo2fourchette",
       title: "Koo2Fourchette",
       kind: "Atelier professionnel · SIO 1",
@@ -256,7 +302,7 @@ window.PORTFOLIO = {
   DOCUMENTS: [
     { label: "CV", file: "CV-Jayden-AKOI.pdf", href: "assets/docs/CV-Jayden-AKOI.pdf" },
     { label: "Lettre de motivation", file: "Lettre-motivation-Jayden-AKOI.pdf", href: "assets/docs/lettre-motivation-Jayden-AKOI.pdf" },
-    { label: "Rapport de stage 1re année", file: "Rapport-stage-SIO1-Jayden-AKOI.pdf", href: null },
+    { label: "Rapport de stage 1re année", file: "Rapport-stage-SIO1-Jayden-AKOI.pdf", href: "assets/docs/rapport-stage-SIO1-Jayden-AKOI.pdf" },
   ],
 
   BLOC1: {
