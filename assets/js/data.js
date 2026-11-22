@@ -171,7 +171,7 @@ window.PORTFOLIO = {
         "Refonte et auto-hébergement du site d'un service de partage de recettes : de la maquette HTML jusqu'à l'infrastructure réseau complète, dans un scénario d'entreprise réaliste.",
       context:
         "La société Koo_2_fourchette, spécialisée dans la mise en ligne de recettes par des particuliers, veut un site au design actuel et quitter son hébergement chez un FAI pour passer en auto-hébergement. Embauché dans l'entreprise, je dois concevoir le nouveau site ET mettre en place toute l'infrastructure système et réseau qui l'héberge.",
-      stack: ["HTML", "CSS", "PHP", "MySQL", "Linux", "Apache", "SSH", "VirtualBox", "FTP", "Git", "Trello"],
+      stack: ["HTML", "CSS", "PHP", "MySQL", "Linux", "Apache", "SSH", "VirtualBox", "FTP", "Git", "Kanban"],
       missions: [
         {
           group: "Développement",
@@ -203,7 +203,7 @@ window.PORTFOLIO = {
           group: "Gestion de projet",
           items: [
             "Versionnement des configurations serveur et du code avec Git",
-            "Suivi des tâches sur Trello",
+            "Suivi des tâches sur un tableau Kanban",
             "Rédaction des procédures associées à chaque action",
           ],
         },
